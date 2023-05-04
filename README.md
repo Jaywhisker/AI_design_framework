@@ -14,7 +14,7 @@ The Codes uses the following libraries:
 `pandas` <br>
 `numpy` <br>
 
-with `pip`:
+Install the libraries with `pip`:
 ```
 pip install amazon_search_results_scraper
 pip install beautifulsoup4
