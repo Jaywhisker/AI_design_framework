@@ -31,9 +31,10 @@ pip install numpy
 
 There were several following helper codes that are used in the project.
 
+
+`insearch_result`: A function used to check if the title of the product contains all the words of the main search term. <br>
+For example, if the search term is `['dyson', 'am07']`, all titles that will get choosen must have these 2 words in their titles.
 ```
-#function to ensure that the product that we are scrapping reviews from is the actual product as search terms may return irrelevant products
-#require: search_term to be a list of words making up the product in lower case
 def insearch_result(search_term, title):
     title = title.lower() #as search_term is in lower case
     for keywords in search_term:
