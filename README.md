@@ -31,6 +31,9 @@ For example, if the search term is `['dyson', 'am07']`, all titles that will get
 -----
 ## Scraper.py (Web scraping functions)
 This file is a collection of scrapper functions used to collect data from various websites. <br>
+In order to use each function in a new python file, place Helper.py and the specific python file in the same directory as your python file and run the code in the codeblock provided.
+
+
 Current functions: <br>
 `Amazon`: 
 
