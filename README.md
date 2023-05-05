@@ -16,45 +16,19 @@ pip install youtube-transcript-api
 pip install pandas
 pip install numpy
 ```
+-----
 
 ## Helper.py (helper functions)
 
 This file contains several helper functions that were used in the project.
 
------
 
 `insearch_result`: A function used to check if the title of the product contains all the words of the main search term. <br>
 For example, if the search term is `['dyson', 'am07']`, all titles that will get choosen must have these 2 words in their titles.
-```
-def insearch_result(search_term, title):
-    title = title.lower() #as search_term is in lower case
-    for keywords in search_term:
-        if keywords not in title:
-            print(title)
-            return False
-    return True
-```
 
------
 `save_data`: A function used to save dataframes into csvs inside a folder under Data and followed by a combination of the search_terms
-```
-import os
-import csv
 
-def save_data(data, file_name, search_terms):
-    try: # Create directory named after search terms
-        os.makedirs("Data/%s" % " ".join(search_terms)) 
-        print("Directory created")
-
-    except FileExistsError:
-        print("Directory exists")
-
-    #save to csv file
-    data.to_csv("Data/%s/%s.csv" %(" ".join(search_terms), file_name))
-```
 -----
-
-
 ## Scraper.py (Web scraping functions)
 This file is a collection of scrapper functions used to collect data from various websites. <br>
 Current functions: <br>
