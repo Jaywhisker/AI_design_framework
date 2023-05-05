@@ -44,9 +44,9 @@ Current functions: <br>
 
 `get_reddit_comments`: A function that takes the search_terms, an api_key from reddit apps and the count of the number of posts to be scanned and returns a csv with the comments from those threads.
 
-### Calling the functions
-In order to use the functions above in a new python file, place the Helper.py and Scraper.py files in the same location and import the function from Scraper.py.
+`get_apple_insider_comments`: A function that takes a list of articles and return a csv with the comments from the links provided.
 
+`get_hardware_zone_comments`: A function that takes the number of pages to scan from the iphone chat room on the hardware zone and returns a csv with the comments from the various pages scanned.
 ```
 from Scraper import *
 
