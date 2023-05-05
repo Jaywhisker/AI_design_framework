@@ -1,13 +1,11 @@
-
+#####################################################################################################
+# This is the functions to retrieve captions from Youtube Videos
+# imports: googleapiclient.discovery, YouTubeTranscriptApi, pandas, clean, helper functions from Helper
 import googleapiclient.discovery
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
 from cleantext import clean
 from Helper import *  # imports the helper functions created in the Helper.py
-
-#####################################################################################################
-# This is the functions to retrieve captions from Youtube Videos
-# imports: googleapiclient.discovery, YouTubeTranscriptApi, pandas, clean, helper functions from Helper
 
 # Main packaged function
 # Outputs: Returns a csv with youtube captions from the videos sweeped based on the search_terms
@@ -107,6 +105,10 @@ def youtube_captions(vidID, youtube):
     return df
 
 #####################################################################################################
+import googleapiclient.discovery
+import pandas as pd
+from cleantext import clean
+from Helper import *  # imports the helper functions created in the Helper.py
 # This is the functions to retrieve captions from Youtube Videos
 # imports: googleapiclient.discovery, pandas, clean, helper functions from Helper
 
