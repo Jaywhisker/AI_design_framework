@@ -55,7 +55,7 @@ def save_data(data, file_name, search_terms):
 -----
 
 
-## Scraper.py
+## Scraper.py (Web scraping functions)
 This file is a collection of scrapper functions used to collect data from various websites. <br>
 Current functions: <br>
 `Amazon`: 
