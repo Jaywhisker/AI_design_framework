@@ -2,31 +2,9 @@
 
 Insert intro paragraph
 
-## Scraper.py
-This file is a collection of scrapper functions used to collect data from various websites. <br>
-Current functions:
-`Amazon`
-`Shopee`
-`Youtube Reviews`
-`Youtube Comments`
-`Google Shopping`
+## Dependencies
 
-
-## 1. Dependencies
-
-The Codes uses the following libraries:
-
-`amazon_search_results_scraper` <br>
-`beautifulsoup4` <br>
-`selenium` <br>
-`clean-text` <br>
-`langdetect` <br>
-`google-api-python-client` <br>
-`youtube-transcript-api` <br>
-`pandas` <br>
-`numpy` <br>
-
-Install the libraries with `pip`:
+Install the following libraries with `pip`:
 ```
 pip install amazon_search_results_scraper
 pip install beautifulsoup4
@@ -39,7 +17,7 @@ pip install pandas
 pip install numpy
 ```
 
-## 2. Helper functions
+## Helper.py (helper functions)
 
 There were several following helper codes that are used in the project.
 
@@ -75,3 +53,15 @@ def save_data(data, file_name, search_terms):
     data.to_csv("Data/%s/%s.csv" %(" ".join(search_terms), file_name))
 ```
 -----
+
+
+## Scraper.py
+This file is a collection of scrapper functions used to collect data from various websites. <br>
+Current functions:
+`Amazon`: <br>
+`Shopee`: <br>
+`get_youtube_captions`: A function that takes the search_terms, an api_key from ____________ and the count of number of videos to be scanned and returns a csv with all the captions of the respective youtube videos. <br>
+`get_youtube_comments`:  A function that takes the search_terms, an api_key from ____________ and the count of number of videos to be scanned and returns a csv with the comments from those videos. <br>
+`get_googleshopping_reviews`: A function that takes the search_terms and returns a csv of the keywords collected as well as a dictionary of keywords<br>
+`get_reddit_comments`: A function that takes the search_terms, an api_key from reddit apps and the count of the number of posts to be scanned and returns a csv with the comments from those threads.<br>
+
