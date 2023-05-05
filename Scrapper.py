@@ -1,6 +1,6 @@
 #####################################################################################################
-# This is the functions to retrieve captions from Youtube Videos
-# imports: googleapiclient.discovery, YouTubeTranscriptApi, pandas, clean, helper functions from Helper
+# This is the functions to retrieve captions from Youtube Videos.
+# imports: googleapiclient.discovery, YouTubeTranscriptApi, pandas, clean, helper functions from Helper.
 import googleapiclient.discovery
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
@@ -105,7 +105,7 @@ def youtube_captions(vidID, youtube):
     return df
 
 #####################################################################################################
-# This is the functions to retrieve captions from Youtube Videos
+# This is the functions to retrieve comments from Youtube Videos
 # imports: googleapiclient.discovery, pandas, clean, helper functions from Helper
 import googleapiclient.discovery
 import pandas as pd
@@ -247,8 +247,8 @@ def youtube_comments(vidID, youtube):
     return df
 
 #####################################################################################################
-# This is the functions to retrieve the keywords that google shopping has classified the comments for a product into
-# imports:beautifulSoup, selenium, time, pandas and helper functions from Helper
+# This is the functions to retrieve the keywords that google shopping has classified the comments for a product into.
+# imports:beautifulSoup, selenium, time, pandas and helper functions from Helper.
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -402,8 +402,8 @@ def googleshopping_keywords(productID, search_terms):
     # returning dictionary because total_uncleaned_keywords() requires dictionary
     return df, keyword_dict
 #####################################################################################################
-# This is the functions to scrape comments about 
-# imports:praw, re, pandas, clean and helper functions from Helper
+# This is the functions to scrape comments about a certain topic from reddit.
+# imports:praw, re, pandas, clean and helper functions from Helper.
 # Note: This requires you to create a reddit app on https://www.reddit.com/prefs/apps, every app will have an id, stored as reddit_id, and a secret, reddit_secret.
 import praw
 import re
