@@ -30,3 +30,4 @@ pip install numpy
 ## 2. Helper functions
 
 There were several following helper codes that are used in the project.
+
