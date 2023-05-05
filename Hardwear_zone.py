@@ -14,7 +14,7 @@ from Helper import *
 # Outputs: Returns a csv with the comments from the various pages scanned
 #        : The function also returns a the dataframe itself
 # requires: number_of_pages (int)
-def hardware_zone_comments(number_of_pages, create_csv=True):
+def get_hardware_zone_comments(number_of_pages, create_csv=True):
     df = search_hardware_zone_forum("iphone", number_of_pages)
     hardware_zone_data = clean_hardware_zone(df)
     if create_csv:
