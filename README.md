@@ -1,4 +1,15 @@
+# To do list:
+1. Reformat the code for general purposes: Able to store search results
+2. Write the readmd
+
+## Subtask
+Amazon: 
+
+
 # Solid_scraper
+
+Current functions:
+
 
 ## 1. Dependencies
 
@@ -44,3 +55,19 @@ def insearch_result(search_term, title):
     return True
 ```
 
+`save_data`: A function used to save dataframes into csvs inside a folder under Data and followed by a combination of the search_terms
+```
+import os
+import csv
+
+def save_data(data, file_name, search_terms):
+    try: # Create directory named after search terms
+        os.makedirs("Data/%s" % " ".join(search_terms)) 
+        print("Directory created")
+
+    except FileExistsError:
+        print("Directory exists")
+
+    #save to csv file
+    data.to_csv("Data/%s/%s.csv" %(" ".join(search_terms), file_name))
+```
