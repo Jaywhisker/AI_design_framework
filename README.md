@@ -1,14 +1,15 @@
-# To do list:
-1. Reformat the code for general purposes: Able to store search results
-2. Write the readmd
-
-## Subtask
-Amazon: 
-
-
 # Solid_scraper
 
+Insert intro paragraph
+
+## Scraper.py
+This file is a collection of scrapper functions used to collect data from various websites. <br>
 Current functions:
+`Amazon`
+`Shopee`
+`Youtube Reviews`
+`Youtube Comments`
+`Google Shopping`
 
 
 ## 1. Dependencies
