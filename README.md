@@ -70,3 +70,22 @@ Current functions: <br>
 
 `get_reddit_comments`: A function that takes the search_terms, an api_key from reddit apps and the count of the number of posts to be scanned and returns a csv with the comments from those threads.
 
+### Calling the functions
+In order to use the functions above in a new python file, place the Helper.py and Scraper.py files in the same location and import the function from Scraper.py.
+
+```
+from Scraper import *
+
+# Parameters for functions
+search_terms = ['pillow', 'case']
+youtube_api_key = INSERT_YOUR_KEY_HERE
+Universal_count = 5
+reddit_api_key = INSERT_YOUR_KEY_HERE
+reddit_secret =INSERT_YOUR_KEY_HERE
+
+#How to call each function (uncomment as needed)
+#get_youtube_captions(search_terms, youtube_api_key, Universal_count)
+#get_youtube_comments(search_terms, youtube_api_key, Universal_count)
+#get_googleshopping_reviews(search_terms)
+#get_reddit_comments(search_terms, number_of_posts, reddit_id, reddit_secret)
+```
