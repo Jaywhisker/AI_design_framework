@@ -105,12 +105,12 @@ def youtube_captions(vidID, youtube):
     return df
 
 #####################################################################################################
+# This is the functions to retrieve captions from Youtube Videos
+# imports: googleapiclient.discovery, pandas, clean, helper functions from Helper
 import googleapiclient.discovery
 import pandas as pd
 from cleantext import clean
-from Helper import *  # imports the helper functions created in the Helper.py
-# This is the functions to retrieve captions from Youtube Videos
-# imports: googleapiclient.discovery, pandas, clean, helper functions from Helper
+from Helper import *
 
 # Main packaged function
 # Outputs: Returns a csv with youtube comments from the videos sweeped based on the search_terms
@@ -247,6 +247,8 @@ def youtube_comments(vidID, youtube):
     return df
 
 #####################################################################################################
+# This is the functions to retrieve the keywords that google shopping has classified the comments for a product into
+# imports:beautifulSoup, selenium, time, pandas and helper functions from Helper
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -254,9 +256,6 @@ from selenium.webdriver.common.by import By
 import time
 import pandas as pd
 from Helper import *
-# This is the functions to retrieve the keywords that google shopping has classified the comments for a product into
-# imports:beautifulSoup, selenium, time, pandas and helper functions from Helper
-
 
 # Main packaged function
 # Outputs: Returns a csv with the title that the keyword came from, number of reviews, the keyword, and the percentage that are either positive or negative comments
