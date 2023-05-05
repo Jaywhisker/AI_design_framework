@@ -8,6 +8,7 @@ from Helper import *
 
 # Main packaged function
 # Outputs: Returns a csv with the comments from the links provided
+#        : The function also returns a the dataframe itself
 # requires: articles_list ([str])
 
 
