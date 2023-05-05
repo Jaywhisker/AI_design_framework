@@ -19,7 +19,7 @@ pip install numpy
 
 ## Helper.py (helper functions)
 
-This file contains several helper functions that are used in the project.
+This file contains several helper functions that were used in the project.
 
 -----
 
