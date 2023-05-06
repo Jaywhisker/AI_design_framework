@@ -144,8 +144,11 @@ def getting_comments_per_link(link):
 
 #function to collect all the amazon reviews
 #requires: search terms, number of links to look through
-def get_amazon_reviews(search_terms, num_of_links):
+def get_amazon_reviews(search_terms, num_of_links=None):
     all_links = amazon_search(search_terms)
+    if num_of_links == None:
+        num_of_links = len(all_links)
+        
     cleaned_links = creatingreviewlinks(all_links, num_of_links) #create all the review links
     
     all_reviews = [] #contain to hold all reviews
