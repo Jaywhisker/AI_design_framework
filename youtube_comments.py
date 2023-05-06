@@ -12,7 +12,7 @@ from Helper import *
 # requires: search_terms (list), api_key (string), count (int)
 
 
-def get_youtube_comments(search_terms, api_key, count, create_csv=True):
+def get_youtube_comments(search_terms, api_key, count=5, create_csv=True):
     # your API key here
     youtube = setting_yt(api_key)
     vid_id = youtube_search(search_terms, count, youtube)
