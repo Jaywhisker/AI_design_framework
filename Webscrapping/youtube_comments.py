@@ -4,7 +4,7 @@
 import googleapiclient.discovery
 import pandas as pd
 from cleantext import clean
-from Helper import *
+from ..Helper import *
 
 # Main packaged function
 # Outputs: Returns a csv with youtube comments from the videos sweeped based on the search_terms
