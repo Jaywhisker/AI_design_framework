@@ -126,8 +126,13 @@ def shopee_reviews_per_link(url):
 
 
 #collecting all the shopee reviews
-#requires: list of links, number of links to look through
-def shopee_reviews(all_links, num_links):
+#requires: search_terms, number of links to look through
+#default number of links will be all available links
+def get_all_shopee_reviews(search_terms, num_links=None):
+  all_links = shopee_search(search_terms) #getting all the links
+  if num_links == None: #if default number of links is chosen
+        num_links = len(all_links) #update number of links to be all the links
+        
   data = pd.DataFrame(columns=["url", "ratings", "reviews"])
   
   #iterate through all the links
