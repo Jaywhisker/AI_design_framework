@@ -18,7 +18,7 @@ import itertools
 from langdetect import detect
 from cleantext import clean
 import time
-from Helper import *
+from ..Helper import *
 
 
 #function to search for product on amazon using selenium
