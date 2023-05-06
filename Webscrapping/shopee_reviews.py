@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 import time
 import pandas as pd
 from cleantext import clean
-from Helper import *
+from ..Helper import *
 
 
 #function to search for product on shopee
