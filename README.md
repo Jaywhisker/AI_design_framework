@@ -141,7 +141,7 @@ save_data(data, file_name, search_terms)
 `get_hardware_zone_comments`: A function that takes the number of pages to scan from the iphone chat room on the hardware zone and returns a dataframe with the comments from the various pages scanned.
 
 ```
-from Hardwear_zone import *
+from hardware_zone import *
 from Helper import *
 
 # Parameters for functions
