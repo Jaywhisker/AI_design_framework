@@ -15,8 +15,7 @@ With the rise of artificial intelligience, there is question on how can we integ
 
 This section contains the collection of Data. There are 2 main data we will be collecting, reviews and opinons of the product from common e-commerce platforms like Amazon, Shopee as well as common content sharing platforms like Youtube. 
 
-**NOTE: Webscrapping of Amazon is against their policy. This is done for educational purpose. Please contact Amazon to get access to their API for commercial uses.
-**
+NOTE: Webscrapping of Amazon is against their policy. This is done for educational purpose. Please contact Amazon to get access to their API for commercial uses.
 
 ## Dependencies
 
