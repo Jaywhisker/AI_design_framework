@@ -3,7 +3,7 @@ With the rise of artificial intelligience, there is question on how can we integ
 
 ![image](https://user-images.githubusercontent.com/51687528/236607422-fe4b1347-86eb-4e45-b8dc-221b9bae5ec0.png)
 <p align="center">
- Credits to Billy for helping us visualise the framework. You can find more of Billy work here: https://awjiazhibilly.medium.com 
+ <em> Credits to Billy for helping us visualise the framework. You can find more of Billy work here: https://awjiazhibilly.medium.com </em>
 </p>
 
 
