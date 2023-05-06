@@ -29,14 +29,14 @@ For example, if the search term is `['dyson', 'am07']`, all titles that will get
 `save_data`: A function used to save dataframes into csvs inside a folder under Data and followed by a combination of the search_terms
 
 -----
-## Scraper.py (Web scraping functions)
+## Scraper folder (Web scraping functions)
 This file is a collection of scrapper functions used to collect data from various websites. <br>
 In order to use each function in a new python file, place Helper.py and the specific python file in the same directory as your python file and run the code in the codeblock provided.
 
 
 Current functions: <br>
-`Amazon`: 
-
+ 
+`amazon_search`: A function that takes the search_terms and will search a 
 `Shopee`: 
 
 `get_youtube_captions`: A function that takes the search_terms, an api_key from ____________ and the count of number of videos to be scanned and returns a csv with all the captions of the respective youtube videos.
