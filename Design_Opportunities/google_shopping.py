@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 import pandas as pd
-from Helper import *
+from ..Helper import *
 
 # Main packaged function
 # Outputs: Returns a csv with the title that the keyword came from, number of reviews, the keyword, and the percentage that are either positive or negative comments

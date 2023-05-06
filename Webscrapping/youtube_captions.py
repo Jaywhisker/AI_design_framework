@@ -5,7 +5,7 @@ import googleapiclient.discovery
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
 from cleantext import clean
-from Helper import *  # imports the helper functions created in the Helper.py
+from ..Helper import *  # imports the helper functions created in the Helper.py
 
 # Main packaged function
 # Outputs: Returns a csv with youtube captions from the videos sweeped based on the search_terms
@@ -13,7 +13,7 @@ from Helper import *  # imports the helper functions created in the Helper.py
 # requires: search_terms (list), api_key (string), count (int)
 
 
-def get_youtube_captions(search_terms, api_key, count, create_csv=True):
+def get_youtube_captions(search_terms, api_key, count=5, create_csv=True):
     youtube = setting_yt(api_key)  # your API key here
     vid_id = youtube_search(search_terms, count, youtube)
     yt_captions = youtube_captions(vid_id, youtube)

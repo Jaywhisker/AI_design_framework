@@ -4,7 +4,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from Helper import *
+from ..Helper import *
 
 # Main packaged function
 # Outputs: Returns a csv with the comments from the links provided
