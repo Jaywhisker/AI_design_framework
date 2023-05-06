@@ -49,6 +49,7 @@ Universal_count = None (will automatically checks all links)
 #data = get_amazon_reviews(search_terms, None)
 #file_name = "YOUR DIRECTORY HERE"
 #save_data(data, file_name, search_terms)
+```
 
 `get_all_shopee_reviews`: A function that takes the search_terms and the count of number of links to be looked through. The function will return a dataframe with the link, the ratings and the respective reviews.
 ```
