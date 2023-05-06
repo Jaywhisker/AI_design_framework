@@ -54,7 +54,7 @@ Current functions: <br>
  
 `get_amazon_reviews`: A function that takes the search_terms and the count of number of links to be looked through. The function will return a dataframe with the product title, the link, the ratings and the respective reviews.
 ```
-from amazon_reviews import *
+from Webscrapping.amazon_reviews import *
 from Helper import *
 
 #Parameters for functions
@@ -68,7 +68,7 @@ save_data(data, file_name, search_terms)
 
 `get_all_shopee_reviews`: A function that takes the search_terms and the count of number of links to be looked through. The function will return a dataframe with the link, the ratings and the respective reviews.
 ```
-from shopee_reviews import *
+from Webscrapping.shopee_reviews import *
 from Helper import *
 
 #Parameters for functions
@@ -82,7 +82,7 @@ save_data(data, file_name, search_terms)
 
 `get_youtube_captions`: A function that takes the search_terms, an api_key from ____________ and the count of number of videos to be scanned and returns a dataframe with all the captions of the respective youtube videos.
 ```
-from youtube_captions import *
+from Webscrapping.youtube_captions import *
 from Helper import *
 
 # Parameters for functions
@@ -96,7 +96,7 @@ save_data(data, file_name, search_terms)
 ```
 `get_youtube_comments`:  A function that takes the search_terms, an api_key from ____________ and the count of number of videos to be scanned and returns a dataframe with the comments from those videos. 
 ```
-from youtube_comments import *
+from Webscrapping.youtube_comments import *
 from Helper import *
 
 # Parameters for functions
@@ -111,7 +111,7 @@ save_data(data, file_name, search_terms)
 
 `get_reddit_comments`: A function that takes the search_terms, an api_key from reddit apps and the count of the number of posts to be scanned and returns a dataframe with the comments from those threads.
 ```
-from reddit_comments import *
+from Webscrapping.reddit_comments import *
 from Helper import *
 
 # Parameters for functions
@@ -127,7 +127,7 @@ save_data(data, file_name, search_terms)
 
 `get_apple_insider_comments`: A function that takes a list of articles and return a dataframe with the comments from the links provided.
 ```
-from apple_insider import *
+from Webscrapping.apple_insider import *
 from Helper import *
 
 # Parameters for functions
@@ -141,7 +141,7 @@ save_data(data, file_name, search_terms)
 `get_hardware_zone_comments`: A function that takes the number of pages to scan from the iphone chat room on the hardware zone and returns a dataframe with the comments from the various pages scanned.
 
 ```
-from hardware_zone import *
+from Webscrapping.hardware_zone import *
 from Helper import *
 
 # Parameters for functions
@@ -158,7 +158,7 @@ Current functions: <br>
 
 `get_googleshopping_reviews`: A function that takes the search_terms and returns a dataframe of the keywords collected as well as a dictionary of keywords.
 ```
-from google_shopping import *
+from Design_Opportunities.google_shopping import *
 from Helper import *
 
 # Parameters for functions
