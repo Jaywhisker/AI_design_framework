@@ -28,11 +28,10 @@ def transcript_summariser(youtube_transcript, search_terms, apikey):
 
 #function to summarise the opinions of each category for the product based on the youtube transcript summary
 #require: finalised design outcomes keywords, data = singular paragraph containing summarised youtube transcript 
-def features_extractor(categories, data, apikey):
+def features_extractor(categories, data, model = "text-davinci-003", apikey):
   openai.api_key = apikey
   prompt = "based on this paragraph:" + data + "\n summarise why the product should be improved or maintained for each of these categories: " + str(categories) + "and return the output in a python dictionary"
   print("prompt": prompt)
-  model = "text-davinci-003"
   result = generate_text(prompt, model)
   try:
       index = result.index("{") #just in case the result: output = {}
