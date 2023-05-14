@@ -28,7 +28,7 @@ def get_specifications(search_terms, model, apikey):
 
 
 #edited ver of get_specification for product flaws
-def get_flaws(search_terms, model):
+def get_flaws(search_terms, model, apikey):
     openai.api_key = apikey
     prompt =  "give me the design flaws of the" + " ".join(search_terms) + "in a python dictionary in the form of specifications:value."
     output = generate_texts(prompt, model)
@@ -44,7 +44,7 @@ def get_flaws(search_terms, model):
 
 
 #edited ver of get_specification for product strengths
-def get_strength(search_terms, model):
+def get_strength(search_terms, model, apikey):
     openai.api_key = apikey
     prompt =  "give me the design strengths of the" + " ".join(search_terms) + "in a python dictionary in the form of specifications:value."
     output = generate_texts(prompt, model)
