@@ -5,6 +5,7 @@
 ######################################################################################################
 
 import openai
+import ast
 from ...Helper import *
 
 #function to summarise one youtube transcript into its pros and cons
@@ -36,9 +37,7 @@ def features_extractor(categories, data, apikey):
   try:
       index = result.index("{") #just in case the result: output = {}
       result = result[index:].strip() #remove output = 
-    
   except:
       pass
-  return result
-
+  return ast.literal_eval(result)
 
