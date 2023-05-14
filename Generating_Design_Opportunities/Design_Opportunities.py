@@ -40,7 +40,7 @@ def reviews_design_outcomes(negative_design_outcomes, positive_design_outcomes, 
     negative_comments = categorical_data[negative_key]['negative'] #get negative comments related to category
 
     #update total_opportunities with suggestions from yt transcript, yt comments, shopee and amazon reviews for negative keywords
-    total_opportunities[negative_key] = summarised_transcript[negative_key] + " " + suggestion_maker(negative_comments, negative_key, search_terms, apikey)
+    total_opportunities[negative_key] = summarised_transcript[negative_key] + " " + suggestion_maker(negative_comments, negative_key, search_terms, model = "text-davinci-003",apikey)
     print(total_opportunities)
 
 
@@ -50,7 +50,7 @@ def reviews_design_outcomes(negative_design_outcomes, positive_design_outcomes, 
     positive_comments = categorical_data[positive_key]['positive'] #get positive comments related to category
 
     #update total_opportunities on what to maintain from yt transcript, yt comments, shopee and amazon reviews
-    total_opportunities[positive_key] = summarised_transcript[positive_key] + " " + maintain_maker(positive_comments, positive_key, search_terms, apikey)
+    total_opportunities[positive_key] = summarised_transcript[positive_key] + " " + maintain_maker(positive_comments, positive_key, search_terms, model = "text-davinci-003",apikey)
     print(total_opportunities)
     
  return total_opportunities
