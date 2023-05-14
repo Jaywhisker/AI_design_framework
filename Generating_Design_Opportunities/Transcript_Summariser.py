@@ -20,7 +20,7 @@ def single_transcript_summariser(data, search_terms, apikey):
 #require: nested list of paragraph containing each youtube transcript
 def transcript_summariser(youtube_transcript, search_terms, apikey):
   for transcripts in youtube_transcripts:
-  result = transcript_summariser(transcripts, search_terms)
+  result = single_transcript_summariser(transcripts, search_terms, apikey)
   summarised_reviews += result.strip() #remove whitespace 
   return summarised_reviews
 
