@@ -72,7 +72,7 @@ def finalised_design_outcomes(dataset):
   positive_design_outcomes = sorted_by_pos[:5] #get top 5 positive design outcomes
   finalised_design_opp = [x[0] for x in negative_design_outcomes] + [x[0] for x in positive_design_outcomes]
   
-  return finalised_design_opp
+  return negative_design_outcomes,positive_design_outcomes, finalised_design_opp
   
 
   
