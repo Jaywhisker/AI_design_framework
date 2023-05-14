@@ -5,6 +5,7 @@
 ######################################################################################################
 from transformers import pipeline
 import pandas as pd
+from ...Helper import *
 
 #function to merge all 3 data into a singular list
 #requires all inputs to be a list
@@ -28,7 +29,7 @@ def categorising_single_data(prompt, keywords, dictionary):
 
 
 #function to categorise all comments, return both dictionary and dataframe such that dataframe can be save if wanted
-def categorising_all_data(all_data, all_keywords):
+def categorising_all_data(all_data, all_keywords, search_terms, create_csv=True):
   categorised_comments  = {}
   for keyword in all_keywords: #creating the categorised comments dictionary
     categorised_comments[keyword] = [] #dictionary values will be a list to hold all the comments
@@ -39,13 +40,15 @@ def categorising_all_data(all_data, all_keywords):
   print(categorised_comments)
   
   #saving categorised_comments to a csv file just in case
-  df_all = pd.DataFrame(columns=['Comments', 'Category']) #create a datafram object
-  for key in categorised_comments.keys():
-    value = categorised_comments[key] #comments [] for all comments related to category
-    for comments in value:
-      df_all = df_all.append({'Comments': comments, 'Category': key}, ignore_index = True) #append each commment into df
+  if create_csv:
+    df_all = pd.DataFrame(columns=['Comments', 'Category']) #create a datafram object
+    for key in categorised_comments.keys():
+      value = categorised_comments[key] #comments [] for all comments related to category
+      for comments in value:
+        df_all = df_all.append({'Comments': comments, 'Category': key}, ignore_index = True) #append each commment into df
+    save_data(df_all, "categorised data", search_terms)
       
- return categorised_comments, df_all
+ return categorised_comments
 
   
   
