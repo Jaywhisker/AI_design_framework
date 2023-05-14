@@ -22,8 +22,6 @@ def get_youtube_captions(search_terms, api_key, count=5, create_csv=True):
     return yt_captions
 
 # function to access youtube with API key
-
-
 def setting_yt(Api_key):
     api_service_name = "youtube"
     api_version = "v3"
