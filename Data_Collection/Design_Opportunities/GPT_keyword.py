@@ -7,14 +7,7 @@
 import openai
 import ast
 import nltk
-
-#function to send prompt to model in openai, temperature at 0 such that the data is reproducible
-#prompt = tokenised(prompt) to ensure that prompt does not exceed limit
-def generate_texts(prompt, model): 
-    response = openai.Completion.create(
-        engine=model, prompt= tokenised(prompt, 2056), max_tokens=1024, n=10, stop=None, temperature=0.0
-    )
-    return response.choices[0].text
+from ...Helper import *
 
 #function to generate the product specification
 def get_specifications(search_terms, model):
