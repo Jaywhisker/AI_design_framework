@@ -12,6 +12,30 @@ import pandas as pd
 from cleantext import clean
 from ...Helper import *
 
+#collecting all the shopee reviews
+#requires: search_terms, number of links to look through
+#default number of links will be all available links
+def get_all_shopee_reviews(search_terms, num_links=None, create_csv=True):
+  all_links = shopee_search(search_terms) #getting all the links
+  if num_links == None: #if default number of links is chosen
+        num_links = len(all_links) #update number of links to be all the links
+        
+  data = pd.DataFrame(columns=["url", "ratings", "reviews"])
+  
+  #iterate through all the links
+  for i in range(num_links):
+      links = all_links[i]
+      result = shopee_reviews_per_link(links)
+    
+      if result == []: #if no reviews, ignore
+          pass
+      else:
+          for i in range(len(result)): #if have review, append the reviews and ratings to the dataframe
+              data = data.append({"url": links, "ratings": result[i][0], "reviews": result[i][1]}, ignore_index = True)
+  if create_csv:
+    save_data(data, "shopee reviews", search_terms)
+  return data
+
 
 #function to search for product on shopee
 #using selenium in this scenario (selenium is an automated web driver)
@@ -125,25 +149,4 @@ def shopee_reviews_per_link(url):
     return total_data
 
 
-#collecting all the shopee reviews
-#requires: search_terms, number of links to look through
-#default number of links will be all available links
-def get_all_shopee_reviews(search_terms, num_links=None):
-  all_links = shopee_search(search_terms) #getting all the links
-  if num_links == None: #if default number of links is chosen
-        num_links = len(all_links) #update number of links to be all the links
-        
-  data = pd.DataFrame(columns=["url", "ratings", "reviews"])
-  
-  #iterate through all the links
-  for i in range(num_links):
-      links = all_links[i]
-      result = shopee_reviews_per_link(links)
-    
-      if result == []: #if no reviews, ignore
-          pass
-      else:
-          for i in range(len(result)): #if have review, append the reviews and ratings to the dataframe
-              data = data.append({"url": links, "ratings": result[i][0], "reviews": result[i][1]}, ignore_index = True)
-  
-  return data
+
