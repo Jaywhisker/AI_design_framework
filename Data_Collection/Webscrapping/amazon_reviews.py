@@ -20,6 +20,41 @@ from cleantext import clean
 import time
 from ...Helper import *
 
+#function to collect all the amazon reviews
+#requires: search terms, number of links to look through
+#default number of links is all the links
+def get_amazon_reviews(search_terms, num_of_links=None, create_csv=True):
+    all_links = amazon_search(search_terms)
+    if num_of_links == None:  #if default is chosen, update num_of_links to length of all links
+        num_of_links = len(all_links)
+        
+    cleaned_links = creatingreviewlinks(all_links, num_of_links) #create all the review links
+    
+    all_reviews = [] #contain to hold all reviews
+    
+    print(cleaned_links)
+    print(len(cleaned_links), num_of_links)
+
+    for idx in range(num_of_links): 
+        links = cleaned_links[idx][-1] #get review link
+        title = cleaned_links[idx][0] #get product title
+
+        #get total reviews for the specific link
+        links_reviews = getting_comments_per_link(links)
+        review_list = list(zip(itertools.repeat(title), links_reviews)) #format: title, review
+
+        #merge the reviews with other product links reviews
+        all_reviews.extend(review_list)
+
+    df = pd.DataFrame(columns=['title', 'links', 'ratings', 'comments'])
+
+    #append all the reviews into a dataframe
+    for data in all_reviews:
+        df = df.append({'title': data[0], 'links': data[1][0], 'ratings': data[1][1], 'comments': data[1][2]}, ignore_index=True)
+    
+    if create_csv:
+        save_data(df, "amazon reviews", search_terms)
+    return df
 
 #function to search for product on amazon using selenium
 def amazon_search(search_terms):
@@ -142,36 +177,4 @@ def getting_comments_per_link(link):
     return total_reviews
 
 
-#function to collect all the amazon reviews
-#requires: search terms, number of links to look through
-#default number of links is all the links
-def get_amazon_reviews(search_terms, num_of_links=None):
-    all_links = amazon_search(search_terms)
-    if num_of_links == None:  #if default is chosen, update num_of_links to length of all links
-        num_of_links = len(all_links)
-        
-    cleaned_links = creatingreviewlinks(all_links, num_of_links) #create all the review links
-    
-    all_reviews = [] #contain to hold all reviews
-    
-    print(cleaned_links)
-    print(len(cleaned_links), num_of_links)
 
-    for idx in range(num_of_links): 
-        links = cleaned_links[idx][-1] #get review link
-        title = cleaned_links[idx][0] #get product title
-
-        #get total reviews for the specific link
-        links_reviews = getting_comments_per_link(links)
-        review_list = list(zip(itertools.repeat(title), links_reviews)) #format: title, review
-
-        #merge the reviews with other product links reviews
-        all_reviews.extend(review_list)
-
-    df = pd.DataFrame(columns=['title', 'links', 'ratings', 'comments'])
-
-    #append all the reviews into a dataframe
-    for data in all_reviews:
-        df = df.append({'title': data[0], 'links': data[1][0], 'ratings': data[1][1], 'comments': data[1][2]}, ignore_index=True)
-    
-    return df
