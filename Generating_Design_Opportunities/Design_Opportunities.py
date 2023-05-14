@@ -31,7 +31,7 @@ def maintain_maker(data, keyword, search_term, apikey):
 #requires: all negative keywords, top 5 posiitve keywords, all categorised data, the summarised yt transcript, search_terms and api key
 #the code will extract all negative comments categorised under the negative keywords and ask GPT-3 for suggestions before merging it with the summarised yt transcript
 #the code will repeat with the top 5 positive keywords
-def reviews_design_outcomes(negative_design_outcomes, positive_design_outcomes, categorical_data, summarised_transcript search_terms, apikey)
+def reviews_design_outcomes(negative_design_outcomes, positive_design_outcomes, categorical_data, summarised_transcript search_terms, apikey):
   total_opportunities = {} #dictionary to hold all the suggestions (merges features_extractor and suggestion/maintain_maker outputs)
 
   #negative design outcomes
