@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import time
 import pandas as pd
 from cleantext import clean
-from ..Helper import *
+from ...Helper import *
 
 
 # Main packaged function
