@@ -33,10 +33,20 @@ def insearch_result(search_term, title):
             return False
     return True
 
+def save_txt(data, filename, search_terms):
+    try: # Create directory named after search terms
+        os.makedirs("Data/%s" % " ".join(search_terms)) 
+        print("Directory created")
 
-#####################################################################
+    except FileExistsError:
+        print("Directory exists")
+        
+    with open('Data/%s/%s.txt' %(" ".join(search_terms), file_name)) , 'w') as f: #your own filename here
+    f.write(data)
+
+#====================================================================
 # Main helper functions for sending prompts to GPT-3
-#####################################################################
+#====================================================================
 
 #function to tokenise and reduce length of prompt due to token limits
 #for openai we use a token limit of 2056 
