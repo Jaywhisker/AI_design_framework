@@ -54,12 +54,12 @@ def Generating_Design_Opportunities(search_terms, ytapi, gpt3api, model="text-da
   #                            DATA COLLECTION webscrapping
   #============================================================================================
 
-  print("Getting Amazon Reviews)
+  print("Getting Amazon Reviews")
   amazon_data = get_amazon_reviews(search_terms, num_of_links=None, create_csv=True)
   print("Collected", amazon_data.shape[0], "Amazon Reviews")
   amazon_data
         
-  print("Getting Shopee Reviews)
+  print("Getting Shopee Reviews")
   shopee_data = get_all_shopee_reviews(search_terms, num_of_links=None, create_csv=True)
   print("Collected", shopee_data.shape[0], "Shopee Reviews")
   shopee_data
