@@ -26,7 +26,7 @@ def get_reddit_comments(search_terms, number_of_posts, reddit_id, reddit_secret,
 
 
 def scrape_reddit(search_term, number_of_posts, reddit_id, reddit_secret):
-    df = pd.DataFrame(columns=['Posts', 'Comments'])
+    df = pd.DataFrame(columns=['Posts', 'comments'])
     reddit = praw.Reddit(client_id=reddit_id,
                          client_secret=reddit_secret,
                          user_agent='<console:HAPPY:1.0')
@@ -43,10 +43,10 @@ def scrape_reddit(search_term, number_of_posts, reddit_id, reddit_secret):
 
 
 def cleanup_reddit(uncleaned_frame):
-    df = pd.DataFrame(columns=['Posts', 'Comments'])
+    df = pd.DataFrame(columns=['Posts', 'comments'])
     uncleaned_frame.reset_index()
     for index, row in uncleaned_frame.iterrows():
-        Post, Comment = row['Posts'], row['Comments']
+        Post, Comment = row['Posts'], row['comments']
         if Comment == "[deleted]":
             continue
         subComments = []

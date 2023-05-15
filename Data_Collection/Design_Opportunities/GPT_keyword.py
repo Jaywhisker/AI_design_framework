@@ -56,3 +56,19 @@ def get_strength(search_terms, model, apikey):
     design_strengths = ast.literal_eval(output)
     print("design strengths", design_strengths)
     return design_strengths
+
+#edited ver of get_competitors for product
+def get_competitors(search_terms, model, apikey):
+    openai.api_key = apikey
+    prompt =  "give me the competitors of the" + " ".join(search_terms) + "in a python dictionary in the form of product:company."
+    output = generate_texts(prompt, model)
+    try:
+        index = output.index("{")
+        output = output[index:].strip()
+    except:
+        pass
+    competitors = ast.literal_eval(output)
+    print("competitors", competitors)
+    return competitors
+
+

@@ -124,7 +124,7 @@ def search_hardware_zone_forum(main_keyword, number_of_pages):
 # function to obtain the summarised keywords in google_shopping
 # requires: dataframe of comments
 def clean_hardware_zone(dataframe):
-    df = pd.DataFrame(columns=["Comments"])
+    df = pd.DataFrame(columns=["comments"])
     for row in dataframe.iterrows():
         sentence = row[-1]
         if "Click to expand..." in sentence:
@@ -132,6 +132,6 @@ def clean_hardware_zone(dataframe):
         else:
             slicing_index = 0
         sentence = (sentence[slicing_index:].strip())
-        df.loc[len(df)] = {"Comments": sentence}
+        df.loc[len(df)] = {"comments": sentence}
 
     return df
