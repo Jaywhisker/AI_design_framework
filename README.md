@@ -1,4 +1,7 @@
 # AI design framework
+
+<---------- Currently Undergoing Major Refactoring ---------->
+
 With the rise of artificial intelligience, there is question on how can we integrate AI into our design framework to automate the process to finding design opportunities for different products. This github page contains a suggested framework that was created by us.
 
 ![image](https://user-images.githubusercontent.com/51687528/236607422-fe4b1347-86eb-4e45-b8dc-221b9bae5ec0.png)

@@ -1,0 +1,17 @@
+transformers == 4.27.3
+numpy == 1.26.1
+pandas == 2.1.4
+scipy == 1.11.4
+gensim == 4.3.1
+nltk == 3.6.5
+wordninja == 2.0.0
+selenium == 4.8.2
+beautifulsoup4 == 4.10.0
+openai == 0.28.1
+langdetect == 1.0.9
+clean-text == 0.6.0
+requests == 2.30.0
+google-api-python-client == 2.80.0
+youtube-transcript-api == 0.5.0
+flair == 0.12.2
+jupyter == 1.0.0

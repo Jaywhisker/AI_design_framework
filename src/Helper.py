@@ -41,8 +41,8 @@ def save_txt(data, filename, search_terms):
     except FileExistsError:
         print("Directory exists")
         
-    with open('Data/%s/%s.txt' %(" ".join(search_terms), file_name)) , 'w') as f: #your own filename here
-    f.write(data)
+    with open('Data/%s/%s.txt' %(" ".join(search_terms), filename)) , 'w') as f: #your own filename here
+        f.write(data)
 
 #====================================================================
 # Main helper functions for sending prompts to GPT-3
